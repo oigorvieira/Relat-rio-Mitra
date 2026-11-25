@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academia Mitra · Relatório Meta Ads</title><meta name="robots" content="noindex,nofollow">
+<style>html,body{margin:0;background:#000}
+.vr{--bg:#000;--card:rgba(255,255,255,.03);--line:rgba(255,255,255,.09);--tx:#F2F2F2;--mut:hsl(0 0% 55%);--g:#39FF14;--warn:#f5b84b;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--tx);background:var(--bg);padding:20px 18px 40px;line-height:1.5}
+.vr *{box-sizing:border-box}
+.vr .wrap{max-width:1080px;margin:0 auto}
+.vr header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid hsl(0 0% 12%)}
+.vr header.top img{height:34px;width:auto;display:block}
+.vr header.top img.vlogo{height:22px}
+.vr .eyebrow{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--g)}
+.vr h1{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(30px,6vw,46px);line-height:1.1;margin:8px 0 6px}
+.vr h2{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:28px;margin:0 0 4px}
+.vr .sub{color:var(--mut);font-size:14px;margin:0}
+.vr .hero{padding:28px 0 8px}
+.vr .bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 6px}
+.vr .pill{font-family:'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--tx);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+.vr .pill.on{border-color:rgba(57,255,20,.6);color:var(--g);background:rgba(57,255,20,.07)}
+.vr select,.vr input[type=date]{font:inherit;font-size:13px;color:var(--tx);background:#0b0b0b;border:1px solid var(--line);border-radius:8px;padding:8px 10px;color-scheme:dark}
+.vr label.f{font-size:12px;color:var(--mut);display:flex;gap:8px;align-items:center}
+.vr .divider{height:1px;margin:26px 0;background:linear-gradient(90deg,transparent,rgba(57,255,20,.35),transparent)}
+.vr .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.vr .grid{display:grid;gap:12px}
+.vr .g4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.vr .g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.vr .g5{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.vr .big{font-family:'Space Grotesk',Inter,sans-serif;font-size:32px;font-weight:600;line-height:1.15;margin-top:6px}
+.vr .mid{font-family:'Space Grotesk',Inter,sans-serif;font-size:21px;font-weight:600;margin-top:4px}
+.vr .lbl{font-family:'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;color:var(--mut)}
+.vr .delta{font-size:12px;margin-top:4px;color:var(--mut)}
+.vr .delta.good{color:var(--g)}.vr .delta.bad{color:var(--warn)}
+.vr .note{font-size:12px;color:var(--mut);margin:10px 0 0}
+.vr .tablewrap{overflow-x:auto}
+.vr table{width:100%;border-collapse:collapse;font-size:13px}
+.vr th{font-family:'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--mut);text-align:right;padding:10px 8px;border-bottom:1px solid hsl(0 0% 12%);cursor:pointer;white-space:nowrap;user-select:none}
+.vr th:first-child,.vr td:first-child{text-align:left}
+.vr th.cur{color:var(--g)}
+.vr td{padding:10px 8px;border-bottom:1px solid hsl(0 0% 9%);text-align:right;font-variant-numeric:tabular-nums}
+.vr td:first-child{max-width:260px}
+.vr ul.hl{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.vr ul.hl li{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.vr .ck{flex:none;width:20px;height:20px;border-radius:50%;background:rgba(57,255,20,.15);color:var(--g);display:grid;place-items:center;font-size:12px;margin-top:1px}
+.vr .ck.w{background:rgba(245,184,75,.15);color:var(--warn)}
+.vr .chart{position:relative;min-height:230px}
+.vr .tip{position:absolute;pointer-events:none;background:#111;border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12px;white-space:nowrap;display:none;z-index:2}
+.vr footer{margin-top:34px;padding-top:16px;border-top:1px solid hsl(0 0% 12%);display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--mut);font-size:12px;flex-wrap:wrap}
+.vr footer img{height:16px;vertical-align:middle;margin-left:6px}
+.vr .sec{margin-top:34px}
+.vr .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--mut)}
+</style></head><body>
+<div class="vr"><div class="wrap">
+<header class="top">
+  <img src="assets/mitra.png" alt="Academia Mitra">
+  <div class="eyebrow">Relatório vivo · Meta Ads</div>
+</header>
+<section class="hero" id="topo">
+  <div class="eyebrow">Academia Mitra</div>
+  <h1>Desempenho das campanhas</h1>
+  <p class="sub">Atualizado todos os dias às 7h. Dados até <b data-draw="ultima" data-source="atualizacao" data-field="ultima_data">—</b>.</p>
+  <div class="bar" id="nav_unidades">
+    <button class="pill" data-un="todas">Visão consolidada</button>
+    <button class="pill" data-un="Saquarema">Mitra Saquarema</button>
+    <button class="pill" data-un="Araruama">Mitra Araruama</button>
+  </div>
+  <div class="bar">
+    <label class="f">Período
+      <select id="sel_periodo" aria-label="Período">
+        <option value="ult7">Últimos 7 dias</option>
+        <option value="ult14">Últimos 14 dias</option>
+        <option value="ult30">Últimos 30 dias</option>
+        <option value="mes_atual">Mês atual</option>
+        <option value="mes_anterior">Mês anterior</option>
+        <option value="tudo">Todo o período disponível</option>
+        <option value="custom">Personalizado…</option>
+      </select></label>
+    <span id="box_custom" hidden>
+      <label class="f">De <input type="date" id="inp_de"></label>
+      <label class="f">Até <input type="date" id="inp_ate"></label>
+    </span>
+    <span class="tag" data-draw="rot_periodo">—</span>
+  </div>
+</section>
+
+<section id="resumo_sec">
+  <h2 data-draw="titulo_resumo">Resumo do período</h2>
+  <p class="sub">Resultado principal: visitas ao perfil do Instagram, vindas das campanhas de tráfego.</p>
+  <div class="grid g4" style="margin-top:14px">
+    <div class="card"><div class="lbl">Investimento</div><div class="big" data-draw="k_gasto" data-source="resumo" data-field="gasto" data-row="0">—</div><div class="delta" data-draw="d_gasto">—</div></div>
+    <div class="card"><div class="lbl">Visitas ao perfil</div><div class="big" data-draw="k_visitas" data-source="resumo" data-field="visitas" data-row="0">—</div><div class="delta" data-draw="d_visitas">—</div></div>
+    <div class="card"><div class="lbl">Custo por visita</div><div class="big" data-draw="k_cpv" data-source="resumo" data-field="cpv" data-row="0">—</div><div class="delta" data-draw="d_cpv">—</div></div>
+    <div class="card"><div class="lbl">Impressões</div><div class="big" data-draw="k_imp" data-source="resumo" data-field="impressoes" data-row="0">—</div><div class="delta" data-draw="d_imp">—</div></div>
+  </div>
+  <div class="grid g5" style="margin-top:12px">
+    <div class="card"><div class="lbl">CPM</div><div class="mid" data-draw="k_cpm" data-source="resumo" data-field="cpm" data-row="0">—</div></div>
+    <div class="card"><div class="lbl">Cliques no link</div><div class="mid" data-draw="k_lc" data-source="resumo" data-field="cliques_link" data-row="0">—</div></div>
+    <div class="card"><div class="lbl">CTR (link)</div><div class="mid" data-draw="k_ctr" data-source="resumo" data-field="ctr" data-row="0">—</div></div>
+    <div class="card"><div class="lbl">CPC (link)</div><div class="mid" data-draw="k_cpc" data-source="resumo" data-field="cpc" data-row="0">—</div></div>
+    <div class="card"><div class="lbl">Contatos por mensagem</div><div class="mid" data-draw="k_msg" data-source="resumo" data-field="mensagens" data-row="0">—</div></div>
+  </div>
+  <p class="note" data-draw="nota_cmp">—</p>
+</section>
+
+<section class="sec" id="evolucao">
+  <h2>Evolução diária</h2>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><div class="lbl">Visitas ao perfil por dia</div><div class="chart" data-draw="graf_visitas" data-source="serie">—</div></div>
+    <div class="card"><div class="lbl">Investimento por dia (R$)</div><div class="chart" data-draw="graf_gasto" data-source="serie">—</div></div>
+  </div>
+</section>
+
+<section class="sec" id="consolidado" data-draw="sec_cons_wrap">
+  <h2>Visão consolidada</h2>
+  <div class="card tablewrap" style="margin-top:12px">
+    <table data-source="por_unidade" data-row-key="unidade">
+      <thead><tr><th data-field="unidade">Unidade</th><th data-field="gasto">Investimento</th><th data-field="visitas">Visitas</th><th data-field="cpv">Custo/visita</th><th data-field="impressoes">Impressões</th><th data-field="ctr">CTR</th></tr></thead>
+      <tbody data-draw="tbl_unidades"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec" id="destaques">
+  <div class="card"><div class="eyebrow">Destaques do período</div><ul class="hl" data-draw="lista_bem"></ul></div>
+</section>
+
+<section class="sec" id="campanhas">
+  <h2>Por campanha</h2>
+  <p class="sub">Clique no título de uma coluna para ordenar.</p>
+  <div class="card tablewrap" style="margin-top:12px">
+    <table id="t_camp" data-source="campanhas" data-row-key="chave">
+      <thead><tr><th data-sort="campanha" data-field="campanha">Campanha</th><th data-sort="unidade" data-field="unidade">Unidade</th><th data-sort="gasto" data-field="gasto">Investimento</th><th data-sort="resultados" data-field="resultados">Resultados</th><th data-sort="cpr" data-field="cpr">Custo/resultado</th><th data-sort="impressoes" data-field="impressoes">Impressões</th><th data-sort="ctr" data-field="ctr">CTR</th><th data-sort="mensagens" data-field="mensagens">Mensagens</th></tr></thead>
+      <tbody data-draw="tbl_camp"></tbody>
+    </table>
+  </div>
+  <p class="note">Resultado: visitas ao perfil. Na campanha de engajamento o resultado são interações com o post, detalhadas por anúncio abaixo.</p>
+</section>
+
+<section class="sec" id="criativos">
+  <h2>Desempenho por criativo</h2>
+  <p class="sub">Por mês fechado ou em andamento.</p>
+  <div class="bar"><label class="f">Mês <select id="sel_mes" data-draw="sel_mes" data-source="anuncios" aria-label="Mês dos criativos"></select></label></div>
+  <div class="card tablewrap">
+    <table id="t_ads" data-source="anuncios_f" data-row-key="chave">
+      <thead><tr><th data-sort="anuncio" data-field="anuncio">Anúncio</th><th data-sort="unidade" data-field="unidade">Unidade</th><th data-sort="gasto" data-field="gasto">Investimento</th><th data-sort="resultados" data-field="resultados">Resultados</th><th data-sort="cpr" data-field="cpr">Custo/resultado</th><th data-sort="impressoes" data-field="impressoes">Impressões</th><th data-sort="ctr" data-field="ctr">CTR</th><th data-sort="mensagens" data-field="mensagens">Mensagens</th></tr></thead>
+      <tbody data-draw="tbl_ads"></tbody>
+    </table>
+  </div>
+  <p class="note">Posts impulsionados e engajamento ficam nesta mesma tabela, identificados na coluna de campanha pelo nome do anúncio. No engajamento, "resultados" são interações com o post.</p>
+</section>
+
+<footer>
+  <span>Relatório produzido por <img class="vlogo" src="assets/verum.png" alt="VERUM"></span>
+  <span>Atualizado em <span data-draw="gerado" data-source="atualizacao" data-field="gerado_em">—</span> (horário de Brasília)</span>
+</footer>
+</div></div>
+<script src="d3.min.js"></script>
+<script>
+(function(){
+var PAR={un:'todas',p:'mes_atual',de:'',ate:'',mes:''},DATA={},CALC={},CACHE={},DRAWS={},ONDATA=[],ready=false;
+function ds(id){
+ if(CALC[id]){if(!CACHE[id]){var c=CALC[id],ins=c.inputs.map(function(i){return ds(i).data;});var ok=c.inputs.every(function(i){return ds(i).status==='ok';});CACHE[id]=ok?{status:'ok',data:c.fn.apply(null,ins)}:{status:'loading',data:[]};}return CACHE[id];}
+ return DATA[id]?{status:'ok',data:DATA[id]}:{status:'loading',data:[]};}
+window.dash={params:function(){return PAR;},setParams:function(o){Object.keys(o).forEach(function(k){PAR[k]=o[k];});CACHE={};render();},
+ data:ds,calc:function(id,o){CALC[id]=o;},onData:function(f){ONDATA.push(f);},
+ draw:function(n,f){if(f){DRAWS[n]=f;if(ready)run(n);}else run(n);}};
+function run(n){var f=DRAWS[n];if(!f)return;document.querySelectorAll('[data-draw="'+n+'"]').forEach(function(el){try{f(el);}catch(e){console.error(n,e);}});}
+function render(){ONDATA.forEach(function(f){try{f();}catch(e){console.error(e);}});Object.keys(DRAWS).forEach(run);}
+window.__dashStart=function(){
+ Promise.all(['diario','anuncios','atualizacao'].map(function(n){return fetch('dados/'+n+'.json?v='+Date.now()).then(function(r){return r.json();}).then(function(j){DATA[n]=j;});})).then(function(){
+  var js=DATA.anuncios.map(function(r){return r.janela;}).sort();PAR.mes=js[js.length-1];CACHE={};ready=true;render();
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(render,150);});
+ });};
+})();
+
+
+(function(){
+var MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+var MESL=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+function pd(s){var a=s.split('-');return Date.UTC(+a[0],+a[1]-1,+a[2]);}
+function ds(t){var d=new Date(t);return d.getUTCFullYear()+'-'+String(d.getUTCMonth()+1).padStart(2,'0')+'-'+String(d.getUTCDate()).padStart(2,'0');}
+function br(s){return s?s.slice(8,10)+'/'+s.slice(5,7)+'/'+s.slice(0,4):'—';}
+var DAY=86400000;
+window.VR={pd:pd,ds:ds,br:br,DAY:DAY,
+ money:function(v){return v==null||isNaN(v)?'—':'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});},
+ int:function(v){return v==null||isNaN(v)?'—':Math.round(v).toLocaleString('pt-BR');},
+ pct:function(v){return v==null||isNaN(v)?'—':v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'%';},
+ range:function(P,first,last){
+  var p=P.p||'mes_atual',L=pd(last),F=pd(first),a,b,pa,pb,lab;
+  var ld=new Date(L),y=ld.getUTCFullYear(),m=ld.getUTCMonth();
+  if(p==='ult7'||p==='ult14'||p==='ult30'){var n=p==='ult7'?7:p==='ult14'?14:30;b=L;a=L-(n-1)*DAY;pb=a-DAY;pa=pb-(n-1)*DAY;}
+  else if(p==='mes_atual'){a=Date.UTC(y,m,1);b=L;var n2=Math.round((b-a)/DAY)+1;pa=Date.UTC(y,m-1,1);pb=pa+(n2-1)*DAY;}
+  else if(p==='mes_anterior'){a=Date.UTC(y,m-1,1);b=Date.UTC(y,m,0);pa=Date.UTC(y,m-2,1);pb=Date.UTC(y,m-1,0);}
+  else if(p==='tudo'){a=F;b=L;pa=null;pb=null;}
+  else{a=P.de?pd(P.de):F;b=P.ate?pd(P.ate):L;if(b<a){var t=a;a=b;b=t;}var n3=Math.round((b-a)/DAY)+1;pb=a-DAY;pa=pb-(n3-1)*DAY;}
+  var ok=pa!=null&&pa>=F&&pb<=L;
+  return {a:ds(a),b:ds(Math.min(b,L)),pa:pa==null?null:ds(pa),pb:pb==null?null:ds(pb),prevok:ok};
+ },
+ agg:function(rows){var o={gasto:0,visitas:0,impressoes:0,cliques_link:0,mensagens:0};rows.forEach(function(r){o.gasto+=r.gasto;o.visitas+=r.resultados;o.impressoes+=r.impressoes;o.cliques_link+=r.cliques_link;o.mensagens+=r.mensagens;});
+  o.gasto=Math.round(o.gasto*100)/100;o.cpv=o.visitas?o.gasto/o.visitas:null;o.cpm=o.impressoes?o.gasto/o.impressoes*1000:null;o.ctr=o.impressoes?o.cliques_link/o.impressoes*100:null;o.cpc=o.cliques_link?o.gasto/o.cliques_link:null;return o;},
+ sel:function(rows,P,a,b,grupo){return rows.filter(function(r){return r.data>=a&&r.data<=b&&(P.un==='todas'||!P.un||r.unidade===P.un)&&(!grupo||r.grupo===grupo);});}
+};
+var P0=function(){return dash.params();};
+
+dash.calc('resumo',{title:'Resumo do período',description:'Totais do período e do período anterior, campanhas de tráfego (visitas ao perfil).',inputs:['diario','atualizacao'],
+ fn:function(diario,atu){var P=dash.params(),A=atu[0];if(!A)return [];var R=VR.range(P,A.primeira_data,A.ultima_data);
+  var cur=VR.agg(VR.sel(diario,P,R.a,R.b,'principal')),o={};Object.keys(cur).forEach(function(k){o[k]=cur[k];});
+  if(R.prevok){var pv=VR.agg(VR.sel(diario,P,R.pa,R.pb,'principal'));Object.keys(pv).forEach(function(k){o['ant_'+k]=pv[k];});}
+  o.prevok=R.prevok;o.de=R.a;o.ate=R.b;o.pde=R.pa;o.pate=R.pb;return [o];}});
+
+dash.calc('serie',{title:'Série diária',description:'Visitas e investimento por dia no período (campanhas de tráfego).',inputs:['diario','atualizacao'],
+ fn:function(diario,atu){var P=dash.params(),A=atu[0];if(!A)return [];var R=VR.range(P,A.primeira_data,A.ultima_data),m={};
+  VR.sel(diario,P,R.a,R.b,'principal').forEach(function(r){var o=m[r.data]||(m[r.data]={data:r.data,gasto:0,visitas:0});o.gasto+=r.gasto;o.visitas+=r.resultados;});
+  var out=[];for(var t=VR.pd(R.a);t<=VR.pd(R.b);t+=VR.DAY){var k=VR.ds(t),o=m[k]||{data:k,gasto:0,visitas:0};out.push({data:k,gasto:Math.round(o.gasto*100)/100,visitas:o.visitas});}return out;}});
+
+dash.calc('por_unidade',{title:'Por unidade',description:'Totais por unidade no período (tráfego).',inputs:['diario','atualizacao'],
+ fn:function(diario,atu){var P=dash.params(),A=atu[0];if(!A)return [];var R=VR.range(P,A.primeira_data,A.ultima_data);
+  return ['Saquarema','Araruama'].map(function(u){var a=VR.agg(VR.sel(diario,{un:u},R.a,R.b,'principal'));return {unidade:'Mitra '+u,gasto:a.gasto,visitas:a.visitas,cpv:a.cpv,impressoes:a.impressoes,ctr:a.ctr};});}});
+
+dash.calc('campanhas',{title:'Campanhas no período',description:'Totais por campanha no período selecionado.',inputs:['diario','atualizacao'],
+ fn:function(diario,atu){var P=dash.params(),A=atu[0];if(!A)return [];var R=VR.range(P,A.primeira_data,A.ultima_data),m={};
+  VR.sel(diario,P,R.a,R.b,null).forEach(function(r){var k=r.unidade+'|'+r.campanha,o=m[k]||(m[k]={chave:k,unidade:'Mitra '+r.unidade,campanha:r.campanha,eng:r.campanha.indexOf('[ENG]')===0,gasto:0,resultados:0,impressoes:0,cliques_link:0,mensagens:0});o.gasto+=r.gasto;o.resultados+=r.resultados;o.impressoes+=r.impressoes;o.cliques_link+=r.cliques_link;o.mensagens+=r.mensagens;});
+  return Object.keys(m).map(function(k){var o=m[k];o.gasto=Math.round(o.gasto*100)/100;if(o.eng){o.resultados=null;o.cpr=null;}else{o.cpr=o.resultados?o.gasto/o.resultados:null;}o.ctr=o.impressoes&&!o.eng?o.cliques_link/o.impressoes*100:null;return o;}).filter(function(o){return o.gasto>0||o.mensagens>0;});}});
+
+dash.calc('anuncios_f',{title:'Criativos do mês',description:'Anúncios do mês escolhido, na unidade escolhida.',inputs:['anuncios'],
+ fn:function(ads){var P=dash.params();return ads.filter(function(r){return r.janela===P.mes&&(P.un==='todas'||r.unidade===P.un);}).map(function(r){var eng=r.tipo==='interacoes';return {chave:r.unidade+'|'+r.janela+'|'+r.anuncio,anuncio:r.anuncio,unidade:'Mitra '+r.unidade,campanha:r.campanha,grupo:r.grupo,gasto:r.gasto,resultados:r.resultados,cpr:r.resultados?r.gasto/r.resultados:null,impressoes:r.impressoes,ctr:eng||!r.impressoes?null:r.cliques_link/r.impressoes*100,mensagens:r.mensagens,eng:eng};});}});
+
+function ok(id){return dash.data(id).status==='ok';}
+// controles
+function setSel(){var P=dash.params(),s=document.getElementById('sel_periodo');if(s&&document.activeElement!==s)s.value=P.p||'mes_atual';
+ var c=document.getElementById('box_custom');if(c)c.hidden=(P.p!=='custom');
+ document.querySelectorAll('#nav_unidades .pill').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-un')===(P.un||'todas'));});
+ var A=dash.data('atualizacao').data[0];var de=document.getElementById('inp_de'),at=document.getElementById('inp_ate');
+ [de,at].forEach(function(i){if(i&&A){i.min=A.primeira_data;i.max=A.ultima_data;}});
+ if(A&&P.p==='custom'){var R=VR.range(P,A.primeira_data,A.ultima_data);if(de&&document.activeElement!==de&&!de.value)de.value=R.a;if(at&&document.activeElement!==at&&!at.value)at.value=R.b;}
+ var sm=document.getElementById('sel_mes');if(sm&&document.activeElement!==sm&&P.mes)sm.value=P.mes;}
+dash.onData(setSel);
+document.querySelectorAll('#nav_unidades .pill').forEach(function(b){b.addEventListener('click',function(){dash.setParams({un:b.getAttribute('data-un')});});});
+document.getElementById('sel_periodo').addEventListener('change',function(e){dash.setParams({p:e.target.value});});
+function dch(){var d=document.getElementById('inp_de'),a=document.getElementById('inp_ate');
+ if(d.value&&d.validity.valid&&a.value&&a.validity.valid)dash.setParams({p:'custom',de:d.value,ate:a.value});}
+document.getElementById('inp_de').addEventListener('change',dch);document.getElementById('inp_ate').addEventListener('change',dch);
+document.getElementById('sel_mes').addEventListener('change',function(e){dash.setParams({mes:e.target.value});});
+
+dash.draw('ultima',function(el){var d=dash.data('atualizacao');el.textContent=d.status==='ok'&&d.data[0]?VR.br(d.data[0].ultima_data):'—';});
+dash.draw('gerado',function(el){var d=dash.data('atualizacao');el.textContent=d.status==='ok'&&d.data[0]?VR.br(d.data[0].gerado_em.slice(0,10))+' '+d.data[0].gerado_em.slice(11):'—';});
+dash.draw('rot_periodo',function(el){var r=dash.data('resumo');el.textContent=r.status==='ok'&&r.data[0]?VR.br(r.data[0].de)+' a '+VR.br(r.data[0].ate):'—';});
+dash.draw('titulo_resumo',function(el){var P=dash.params();el.textContent=P.un==='Saquarema'?'Resumo do período · Mitra Saquarema':P.un==='Araruama'?'Resumo do período · Mitra Araruama':'Resumo do período · Saquarema + Araruama';});
+
+var KP={k_gasto:['gasto',VR.money,'d_gasto',0],k_visitas:['visitas',VR.int,'d_visitas',1],k_cpv:['cpv',VR.money,'d_cpv',-1],k_imp:['impressoes',VR.int,'d_imp',1],k_cpm:['cpm',VR.money],k_lc:['cliques_link',VR.int],k_ctr:['ctr',VR.pct],k_cpc:['cpc',VR.money],k_msg:['mensagens',VR.int]};
+Object.keys(KP).forEach(function(n){var c=KP[n];
+ dash.draw(n,function(el){var r=dash.data('resumo');el.textContent=r.status==='ok'&&r.data[0]?c[1](r.data[0][c[0]]):'—';});
+ if(c[2])dash.draw(c[2],function(el){var r=dash.data('resumo');el.className='delta';if(r.status!=='ok'||!r.data[0]){el.textContent='—';return;}
+  var o=r.data[0];if(!o.prevok){el.textContent='Sem período anterior para comparar';return;}
+  var a=o[c[0]],b=o['ant_'+c[0]];if(!b||a==null){el.textContent='Período anterior: '+c[1](b);return;}
+  var d=(a-b)/b*100,fav=(c[3]===0)||(d*c[3])>0;
+  if(!fav){el.textContent='Período anterior: '+c[1](b);return;}
+  el.textContent=(d>=0?'▲ ':'▼ ')+Math.abs(d).toLocaleString('pt-BR',{maximumFractionDigits:1})+'% vs. anterior ('+c[1](b)+')';if(c[3]!==0&&Math.abs(d)>=1)el.className='delta good';});});
+dash.draw('nota_cmp',function(el){var r=dash.data('resumo');if(r.status!=='ok'||!r.data[0]){el.textContent='—';return;}var o=r.data[0];
+ el.textContent=o.prevok?'Comparação com o período anterior de mesma duração: '+VR.br(o.pde)+' a '+VR.br(o.pate)+'.':'Ainda não há dados suficientes do período anterior (o histórico começa em 01/10/2026).';});
+
+dash.draw('sec_cons_wrap',function(el){el.hidden=dash.params().un&&dash.params().un!=='todas';});
+dash.draw('tbl_unidades',function(el){var d=dash.data('por_unidade');el.replaceChildren();if(d.status!=='ok')return;
+ d.data.forEach(function(r){var tr=document.createElement('tr');tr.setAttribute('data-key',r.unidade);[r.unidade,VR.money(r.gasto),VR.int(r.visitas),VR.money(r.cpv),VR.int(r.impressoes),VR.pct(r.ctr)].forEach(function(v){var td=document.createElement('td');td.textContent=v;tr.appendChild(td);});el.appendChild(tr);});});
+
+// tabelas ordenáveis
+var SORT={camp:{k:'gasto',d:-1},ads:{k:'gasto',d:-1}};
+function tabela(id,tkey,tbl){
+ var T=document.getElementById(tbl);
+ T.querySelectorAll('th[data-sort]').forEach(function(th){th.addEventListener('click',function(){var k=th.getAttribute('data-sort'),s=SORT[tkey];if(s.k===k)s.d=-s.d;else{s.k=k;s.d=(k==='campanha'||k==='unidade'||k==='anuncio')?1:-1;}dash.draw(id);});});
+ dash.draw(id,function(el){var src=tkey==='camp'?'campanhas':'anuncios_f',d=dash.data(src);el.replaceChildren();
+  T.querySelectorAll('th[data-sort]').forEach(function(th){th.classList.toggle('cur',th.getAttribute('data-sort')===SORT[tkey].k);});
+  if(d.status!=='ok')return;var s=SORT[tkey],rows=d.data.slice().sort(function(a,b){var x=a[s.k],y=b[s.k];if(x==null)return 1;if(y==null)return -1;return (typeof x==='string'?x.localeCompare(y,'pt-BR'):x-y)*s.d;});
+  rows.forEach(function(r){var tr=document.createElement('tr');tr.setAttribute('data-key',r.chave);
+   [tkey==='camp'?r.campanha:r.anuncio,r.unidade,VR.money(r.gasto),r.resultados==null?'—':VR.int(r.resultados),VR.money(r.cpr),VR.int(r.impressoes),VR.pct(r.ctr),VR.int(r.mensagens)].forEach(function(v){var td=document.createElement('td');td.textContent=v;tr.appendChild(td);});el.appendChild(tr);});});}
+tabela('tbl_camp','camp','t_camp');tabela('tbl_ads','ads','t_ads');
+
+dash.draw('sel_mes',function(el){var d=dash.data('anuncios'),P=dash.params();el.replaceChildren();if(d.status!=='ok')return;
+ var js=Array.from(new Set(d.data.map(function(r){return r.janela;}))).sort().reverse();
+ js.forEach(function(j){var o=new Option(MESL[+j.slice(5,7)-1]+' de '+j.slice(0,4),j);el.appendChild(o);});el.value=P.mes&&js.indexOf(P.mes)>=0?P.mes:js[0];});
+
+// gráficos
+function chart(el,rows,key,fmt,mode){el.replaceChildren();var W=Math.max(260,el.clientWidth||300),H=220,m={l:44,r:8,t:10,b:26};
+ var svg=d3.select(el).append('svg').attr('width',W).attr('height',H);var tip=document.createElement('div');tip.className='tip';el.appendChild(tip);
+ var x=d3.scaleBand().domain(rows.map(function(r){return r.data;})).range([m.l,W-m.r]).padding(.18);
+ var mx=d3.max(rows,function(r){return r[key];})||1,y=d3.scaleLinear().domain([0,mx*1.08]).nice().range([H-m.b,m.t]);
+ svg.append('g').selectAll('line').data(y.ticks(4)).join('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',y).attr('y2',y).attr('stroke','rgba(255,255,255,.07)');
+ svg.append('g').selectAll('text').data(y.ticks(4)).join('text').attr('x',m.l-6).attr('y',function(d){return y(d)+4;}).attr('text-anchor','end').attr('fill','#8c8c8c').attr('font-size',10).text(function(d){return d.toLocaleString('pt-BR');});
+ var step=Math.ceil(rows.length/Math.max(2,Math.floor((W-m.l)/46)));
+ svg.append('g').selectAll('text').data(rows.filter(function(r,i){return i%step===0;})).join('text').attr('x',function(r){return x(r.data)+x.bandwidth()/2;}).attr('y',H-8).attr('text-anchor','middle').attr('fill','#8c8c8c').attr('font-size',10).text(function(r){return r.data.slice(8,10)+'/'+r.data.slice(5,7);});
+ function show(ev,r){var b=el.getBoundingClientRect();tip.style.display='block';tip.textContent=VR.br(r.data)+' · '+fmt(r[key]);var tx=ev.clientX-b.left+12;if(tx>W-130)tx=ev.clientX-b.left-140;tip.style.left=Math.max(0,tx)+'px';tip.style.top=Math.max(0,ev.clientY-b.top-34)+'px';}
+ svg.append('g').selectAll('rect').data(rows).join('rect').attr('x',function(r){return x(r.data);}).attr('width',x.bandwidth()).attr('y',function(r){return y(r[key]);}).attr('height',function(r){return H-m.b-y(r[key]);}).attr('rx',2).attr('fill',mode==='g'?'#39FF14':'rgba(57,255,20,.55)')
+  .on('mousemove',show).on('mouseleave',function(){tip.style.display='none';});}
+dash.draw('graf_visitas',function(el){var d=dash.data('serie');if(d.status!=='ok'||!d.data.length){el.textContent='—';return;}chart(el,d.data,'visitas',VR.int,'g');});
+dash.draw('graf_gasto',function(el){var d=dash.data('serie');if(d.status!=='ok'||!d.data.length){el.textContent='—';return;}chart(el,d.data,'gasto',VR.money,'s');});
+
+// destaques
+function li(ul,txt,warn){var l=document.createElement('li'),c=document.createElement('span'),t=document.createElement('span');c.className='ck'+(warn?' w':'');c.textContent=warn?'!':'✓';t.textContent=txt;l.appendChild(c);l.appendChild(t);ul.appendChild(l);}
+function dest(ul,warn){ul.replaceChildren();var r=dash.data('resumo'),s=dash.data('serie'),ad=dash.data('anuncios_f');if(r.status!=='ok'||!r.data[0]||s.status!=='ok'||ad.status!=='ok'){return false;}
+ var o=r.data[0],n=0,t=ad.data.filter(function(x){return !x.eng&&x.grupo==='principal'&&x.gasto>=30&&x.cpr;});
+ var avg=t.length?t.reduce(function(a,x){return a+x.gasto;},0)/t.reduce(function(a,x){return a+x.resultados;},0):null;
+ if(!warn){
+  if(o.visitas)li(ul,VR.int(o.visitas)+' visitas ao perfil no período, a '+VR.money(o.cpv)+' por visita.');
+  if(o.prevok&&o.ant_visitas){var dv=(o.visitas-o.ant_visitas)/o.ant_visitas*100;if(dv>=3)li(ul,'Visitas ao perfil '+dv.toLocaleString('pt-BR',{maximumFractionDigits:1})+'% acima do período anterior.');}
+  if(o.prevok&&o.ant_cpv&&o.cpv){var dc=(o.cpv-o.ant_cpv)/o.ant_cpv*100;if(dc<=-3)li(ul,'Custo por visita '+Math.abs(dc).toLocaleString('pt-BR',{maximumFractionDigits:1})+'% menor que no período anterior.');}
+  var best=s.data.slice().sort(function(a,b){return b.visitas-a.visitas;})[0];if(best&&best.visitas)li(ul,'Melhor dia: '+VR.br(best.data)+', com '+VR.int(best.visitas)+' visitas ao perfil.');
+  if(t.length){var b=t.slice().sort(function(a,b){return a.cpr-b.cpr;})[0];li(ul,'Criativo mais eficiente do mês: "'+b.anuncio+'" ('+b.unidade+'), a '+VR.money(b.cpr)+' por visita.');}
+  if(o.mensagens>0)li(ul,VR.int(o.mensagens)+' contatos por mensagem gerados no período.');
+  if(!ul.children.length)li(ul,'Sem dados no período escolhido.');
+ }else{
+  if(o.prevok&&o.ant_cpv&&o.cpv){var d2=(o.cpv-o.ant_cpv)/o.ant_cpv*100;if(d2>=8){li(ul,'O custo por visita subiu '+d2.toLocaleString('pt-BR',{maximumFractionDigits:1})+'% em relação ao período anterior; estamos acompanhando de perto.',true);n++;}}
+  if(o.prevok&&o.ant_visitas){var d3=(o.visitas-o.ant_visitas)/o.ant_visitas*100;if(d3<=-8){li(ul,'As visitas ao perfil recuaram '+Math.abs(d3).toLocaleString('pt-BR',{maximumFractionDigits:1})+'% frente ao período anterior.',true);n++;}}
+  if(t.length>1&&avg){var w=t.slice().sort(function(a,b){return b.cpr-a.cpr;})[0];if(w.cpr>avg*1.25){li(ul,'O criativo "'+w.anuncio+'" ('+w.unidade+') tem custo por visita de '+VR.money(w.cpr)+', acima da média do mês ('+VR.money(avg)+'): candidato a ajuste ou troca.',true);n++;}}
+  var zero=s.data.filter(function(x){return x.gasto===0;}).length;if(zero>0&&s.data.length>1){li(ul,zero+(zero===1?' dia':' dias')+' do período sem veiculação nas campanhas de tráfego.',true);n++;}
+  if(!n)li(ul,'Nenhum ponto crítico no período.');}
+ return true;}
+dash.draw('lista_bem',function(ul){dest(ul,false);});
+
+})();
+
+__dashStart();</script></body></html>
