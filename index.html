@@ -6,7 +6,7 @@
 .vr *{box-sizing:border-box}
 .vr .wrap{max-width:1080px;margin:0 auto}
 .vr header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid hsl(0 0% 12%)}
-.vr header.top img{height:34px;width:auto;display:block}
+.vr header.top img{height:72px;width:auto;display:block}
 .vr header.top img.vlogo{height:22px}
 .vr .eyebrow{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--g)}
 .vr h1{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(30px,6vw,46px);line-height:1.1;margin:8px 0 6px}
@@ -250,9 +250,9 @@ Object.keys(KP).forEach(function(n){var c=KP[n];
  dash.draw(n,function(el){var r=dash.data('resumo');el.textContent=r.status==='ok'&&r.data[0]?c[1](r.data[0][c[0]]):'—';});
  if(c[2])dash.draw(c[2],function(el){var r=dash.data('resumo');el.className='delta';if(r.status!=='ok'||!r.data[0]){el.textContent='—';return;}
   var o=r.data[0];if(!o.prevok){el.textContent='Sem período anterior para comparar';return;}
-  var a=o[c[0]],b=o['ant_'+c[0]];if(!b||a==null){el.textContent='Período anterior: '+c[1](b);return;}
+  var a=o[c[0]],b=o['ant_'+c[0]];if(!b||a==null){el.textContent='\u00a0';return;}
   var d=(a-b)/b*100,fav=(c[3]===0)||(d*c[3])>0;
-  if(!fav){el.textContent='Período anterior: '+c[1](b);return;}
+  if(!fav||c[3]===0){el.textContent='\u00a0';return;}
   el.textContent=(d>=0?'▲ ':'▼ ')+Math.abs(d).toLocaleString('pt-BR',{maximumFractionDigits:1})+'% vs. anterior ('+c[1](b)+')';if(c[3]!==0&&Math.abs(d)>=1)el.className='delta good';});});
 dash.draw('nota_cmp',function(el){var r=dash.data('resumo');if(r.status!=='ok'||!r.data[0]){el.textContent='—';return;}var o=r.data[0];
  el.textContent=o.prevok?'Comparação com o período anterior de mesma duração: '+VR.br(o.pde)+' a '+VR.br(o.pate)+'.':'Ainda não há dados suficientes do período anterior (o histórico começa em 01/10/2026).';});
